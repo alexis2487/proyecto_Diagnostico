@@ -1,0 +1,3 @@
+# Este proyecto es una aplicación React construida con Vite.
+# Todas las dependencias de ejecución y desarrollo se gestionan con npm (package.json).
+# No se requieren dependencias de Python.
