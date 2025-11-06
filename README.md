@@ -71,3 +71,38 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Local development (recommended)
+
+If you're running this project locally, follow these extra steps to configure environment variables and run the dev server.
+
+1. Copy the example env file and fill in real values (do NOT commit real secrets):
+
+```sh
+cp .env.example .env
+# then edit .env and replace placeholders (or create the file manually on Windows)
+```
+
+On Windows PowerShell you can copy with:
+
+```powershell
+Copy-Item .env.example .env
+# then open .env in your editor and replace placeholders
+```
+
+2. Install dependencies and start the dev server:
+
+```sh
+npm install
+npm run dev
+```
+
+3. Open the URL shown by Vite in your browser (by default: http://localhost:5173).
+
+Notes:
+- The project expects the following client-exposed environment variables (see `src/integrations/supabase/client.ts`):
+	- `VITE_SUPABASE_URL`
+	- `VITE_SUPABASE_PUBLISHABLE_KEY`
+- We added `.env` to `.gitignore` and provided `.env.example` so you can share config structure without leaking secrets.
+
+If you want, update this README with more project-specific instructions (database, migrations, seed data, etc.).
