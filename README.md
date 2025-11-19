@@ -87,4 +87,4 @@ Migrations are located in `supabase/migrations/` and are managed through Supabas
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Unad Licence
